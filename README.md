@@ -11,8 +11,6 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
 ---
 
 ## Tecnologias Utilizadas
-- HTML
-- CSS
 - JavaScript
 - Node + Express
 - MySQL
