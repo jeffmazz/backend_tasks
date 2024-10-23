@@ -34,7 +34,44 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
 ### Schema
 **todolist**
 
-### table 1/2 - **tasks_list**
+### table 1/2 - **users**
+
+<table>
+	<thead>
+		<tr>
+  			<td> Nome </td>
+  			<td> Tipo </td>
+  			<td> Exemplo </td>
+		</tr>
+  	</thead>
+  	<tr>
+  		<td> user_id </td>
+    	<td> INT(11) AUTO_INCREMENT NOT NULL PRIMARY KEY </td>
+    	<td> 1 </td>
+  	</tr>
+  	<tr>
+  		<td> name </td>
+    	<td> VARCHAR(100) NOT NULL </td>
+    	<td> 'Jefferson' </td>
+  	</tr>
+  	<tr>
+  		<td> email </td>
+    	<td> VARCHAR(255) UNIQUE NOT NULL </td>
+    	<td> 'jeff@gmail.com' </td>
+  	</tr>
+  	<tr>
+  		<td> password </td>
+    	<td> varchar(255) NOT NULL </td>
+    	<td> $2b$10$KqfQnJfMBP26X... </td>
+  	</tr>
+  	<tr>
+  		<td> isActive </td>
+    	<td> tinyint(1) NOT NULL  </td>
+    	<td> 1 </td>
+  	</tr>
+</table>
+
+### table 2/2 - **tasks_list**
 
 *Columns*
 - task_id - int(11) AI PK
@@ -45,14 +82,6 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
 - Foreing Key: fk_user
 - Foreign Key Definition: *Target users (user_id > user_id) - On Update RESTRICT - On Delete CASCADE*
 
-### table 2/2 - **users**
-
-*Columns*
-- user_id - int(11) AI PK
-- name - varchar(100)
-- email - varchar(100) UNIQUE
-- password - varchar(255)
-- isActive - tinyint(1) (alterna de false para true (de 0 para 1) após ativação da conta por e-mail)
 
 ---
 
