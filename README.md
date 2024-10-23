@@ -112,34 +112,34 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
 
 ## Rotas
 
-### app.get("/getTasks/:id", ...)
+### GET - /getTasks/:id
 - Lista todas as tarefas relacionadas ao id do usuário.
-### app.post('/addtask', ...)
+### POST - /addtask'
 - Rota para adicionar tarefas, os dados da mesma são recebidos através do req.body.
-### app.delete('/deletetask/:id', ...)
+### DELETE - /deletetask/:id
 - Rota para deletar uma tarefa do banco de dados baseada no seu id.
-### app.put('/concludetask/:id', ...)
+### PUT - /concludetask/:id
 - Rota para definir a tarefa como concluída baseada no seu id.
-### app.put('/cancelconcludetask/:id', ...)
+### PUT - /cancelconcludetask/:id
 - Rota para definir a tarefa como pendente baseada no seu id.
-### app.post('/request-new-password', ...)
+### POST - /request-new-password
 - Rota para solicitação de alteração de senha. Dados necessários são recebidos pelo req.body.
-### app.put("/change-password/:id", ...)
+### PUT - /change-password/:id
 - Rota para alteração de senha baseada no id do usuário.
-### app.post("/verifyToken", ...)
+### POST - /verifyToken
 - Rota para checar se o token informado é valido, inválido ou está expirado utilizando JWT e passando o mesmo pelo req.body.
-### app.delete('/deleteaccount/:id', ...)
+### DELETE - /deleteaccount/:id
 - Rota para deletar o cadastro do usuário baseado no seu id.
-### app.post('/recover-password', ...)
+### POST /recover-password
 - Rota para solicitar a criação de uma nova senha enviando um e-mail com um link. Dados necessários como e-mail são recebidos através do req.body.
-### app.post('/password-recovery', ...)
+### POST - /password-recovery
 - Rota para criar uma nova senha através do link. Dados necessários são recebidos através do req.body.
 
-### router.post('/auth/register-request', ...)
+### POST - /auth/register-request
 - Rota para enviar um e-mail para ativar a conta. Dados são recebidos através do req.body.
-### router.post('/auth/active-account', ...)
+### POST - /auth/active-account
 - Rota para ativar a conta. Dados são recebidos através do req.body.
-### router.post('/auth/login', ...)
+### POST - /auth/login'
 - Rota para realizar o login. Dados são recebidos através do req.body.
 
 ---
