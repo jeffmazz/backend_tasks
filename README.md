@@ -131,9 +131,9 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
 ### app.delete('/deleteaccount/:id', ...)
 - Rota para deletar o cadastro do usuário baseado no seu id.
 ### app.post('/recover-password', ...)
-- Rota para solicitar a recuperação de senha enviando um e-mail com um link. Dados necessários como e-mail são recebidos através do req.body.
+- Rota para solicitar a criação de uma nova senha enviando um e-mail com um link. Dados necessários como e-mail são recebidos através do req.body.
 ### app.post('/password-recovery', ...)
-- Rota para recuperar a senha através do link.
+- Rota para criar uma nova senha através do link. Dados necessários são recebidos através do req.body.
 
 ### router.post('/auth/register-request', ...)
 - Rota para enviar um e-mail para ativar a conta. Dados são recebidos através do req.body.
