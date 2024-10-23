@@ -73,14 +73,40 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
 
 ### table 2/2 - **tasks_list**
 
-*Columns*
-- task_id - int(11) AI PK
-- task_description - varchar(255)
-- status - varchar(50)
-- user_id - int(11)
-
-- Foreing Key: fk_user
-- Foreign Key Definition: *Target users (user_id > user_id) - On Update RESTRICT - On Delete CASCADE*
+<table>
+    <thead>
+        <tr>
+            <td> Nome </td>
+            <td> Tipo </td>
+            <td> Exemplo </td>
+        </tr>
+    </thead>
+    <tr>
+        <td> task_id </td>
+        <td> int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL</td>
+        <td> 1 </td>
+    </tr>
+    <tr>
+        <td> task_description  </td>
+        <td> VARCHAR(255) NOT NULL </td>
+        <td> 'Realizar o README.md o projeto'  </td>
+    </tr>
+    <tr>
+        <td> status </td>
+        <td> VARCHAR(10) NOT NULL </td>
+        <td> 'pendente' </td>
+    </tr>
+    <tr>
+        <td> user_id </td>
+        <td> INT(11) NOT NULL </td>
+        <td> 1 </td>
+    </tr>
+    <tr>
+        <td> fk_user </td>
+        <td> Foreign Key - Target users (user_id > user_id) - On Update RESTRICT - On Delete CASCADE </td>
+        <td> 1  </td>
+    </tr>
+</table>
 
 
 ---
