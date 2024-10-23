@@ -29,10 +29,10 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
 
 ---
 
-## Tabelas no Banco de Dados
+## Configuração do Banco de Dados - MySQL
 
 ### Schema
-**todolist**
+- **todolist**
 
 ### table 1/2 - **users**
 
@@ -104,19 +104,63 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
     <tr>
         <td> Foreign Key (user_id) </td>
         <td> REFERENCES users(user_id) - On Update RESTRICT - On Delete CASCADE </td>
-        <td> 1  </td>
+        <td>  </td>
     </tr>
 </table>
 
+---
+
+## Rotas
+
+### app.get("/getTasks/:id", ...)
+- Lista todas as tarefas relacionadas ao id do usuário.
+### app.post('/addtask', ...)
+- Rota para adicionar tarefas, os dados da mesma são recebidos através do req.body.
+### app.delete('/deletetask/:id', ...)
+- Rota para deletar uma tarefa do banco de dados baseada no seu id.
+### app.put('/concludetask/:id', ...)
+- Rota para definir a tarefa como concluída baseada no seu id.
+### app.put('/cancelconcludetask/:id', ...)
+- Rota para definir a tarefa como pendente baseada no seu id.
+### app.post('/request-new-password', ...)
+- Rota para solicitação de alteração de senha. Dados necessários são recebidos pelo req.body.
+### app.put("/change-password/:id", ...)
+- Rota para alteração de senha baseada no id do usuário.
+### app.post("/verifyToken", ...)
+- Rota para checar se o token informado é valido, inválido ou está expirado utilizando JWT e passando o mesmo pelo req.body.
+### app.delete('/deleteaccount/:id', ...)
+- Rota para deletar o cadastro do usuário baseado no seu id.
+### app.post('/recover-password', ...)
+- Rota para solicitar a recuperação de senha. Dados necessários como e-mail são recebidos através do req.body.
+### app.post('/password-recovery', ...)
+- Rota para recuperar a senha.
+
+### router.post('/auth/register-request', ...)
+- Rota para enviar um e-mail para ativar a conta. Dados são recebidos através do req.body.
+### router.post('/auth/active-account', ...)
+- Rota para ativar a conta. Dados são recebidos através do req.body.
+### router.post('/auth/login', ...)
+- Rota para realizar o login. Dados são recebidos através do req.body.
 
 ---
 
 ## Instalação
-1. Clone o Repositório ``` bash git clone https://github.com/jeffmazz/backend_tasks.git ```
-2. Navegue até a pasta do projeto ``` cd backend ```
-3. Instale as dependências -  ```npm install```
-4. Configure suas variáveis de ambiente no arquivo .env
-5. Execute o servidor ```node server```
+
+``` bash
+// Clone o Repositório
+git clone https://github.com/jeffmazz/backend_tasks.git
+
+// Navegue até a pasta do projeto
+cd backend
+
+// Instale as dependências 
+npm install
+
+// Configure suas variáveis de ambiente no arquivo .env
+
+// Execute o servidor
+node server
+```
 
 ---
 
@@ -125,5 +169,5 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
 
 ---
 
-## Considerações Finais
+## Considerações finais
 Caso queira você também pode estar acessando o front-end para ver a experiência completa do projeto clicando [aqui](https://github.com/jeffmazz/frontend_tasks)
