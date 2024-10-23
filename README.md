@@ -102,8 +102,8 @@ O projeto foi realizado para fins de estudo e para demonstração das habilidade
         <td> 1 </td>
     </tr>
     <tr>
-        <td> fk_user </td>
-        <td> Foreign Key - Target users (user_id > user_id) - On Update RESTRICT - On Delete CASCADE </td>
+        <td> Foreign Key (user_id) </td>
+        <td> REFERENCES users(user_id) - On Update RESTRICT - On Delete CASCADE </td>
         <td> 1  </td>
     </tr>
 </table>
